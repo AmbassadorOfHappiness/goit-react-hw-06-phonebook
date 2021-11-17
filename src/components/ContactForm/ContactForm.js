@@ -26,7 +26,6 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const searchByName = contacts.find((el) => el.name === name);
-
     if (searchByName) {
       alert(`${name} is already in contacts`);
     } else {
