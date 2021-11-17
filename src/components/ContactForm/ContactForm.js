@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import {addContact} from "../../redux/contacts/actions";
+import { addContact } from "../../redux/contacts/actions";
 import { getContacts } from '../../redux/contacts/contacts-selectors';
 import style from '../ContactForm/ContactForm.module.css'
-
 
 export default function ContactForm() {
   const [name, setName] = useState('');
@@ -26,7 +25,6 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const searchByName = contacts.find((el) => el.name === name);
 
     if (searchByName) {
